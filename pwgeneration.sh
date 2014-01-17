@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script provides to generate random pw for fritzbox guest wlan automatically. Tested with version 6.0 and 6.1.
+# This script provides to generate random pw for fritzbox guest wlan. Tested with version 6.0 and 6.1.
 # Further versions will also extract generated qr code. 
 #
 # config
