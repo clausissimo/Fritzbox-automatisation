@@ -1,4 +1,3 @@
-
 //---------------------------------------------------------------------
 // QRCode for JavaScript
 //
@@ -913,4 +912,3 @@ function updateQRCode(elementId, text, scale) {
         element.appendChild(qrImg);
 }
 
-$( document ).ready(function() {updateQRCode("qrcode", "WIFI:S:Bier_und_Stulle;T:WPA;P:E45I-CJvU5ewbhdoqTQhp_Czez1vpdys;;");});
