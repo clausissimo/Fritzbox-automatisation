@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script provides to generate random pw for fritzbox guest wlan. Tested with version 6.0 and 6.1.
-# Further versions will also extract generated qr code. 
+# 
 #
 # config
 # ---------------------------------------
@@ -24,4 +24,8 @@ _PAGE_PFW=$(curl -s "${_URL}/wlan/guest_access.lua" -d 'sid='${_SID})
 
 # set generate pw
 curl --data "activate_guest_access=on&autoupdate=on&btnSave=&group_access=on&guest_ssid=${_SSID}&sec_mode=4&wpa_key=${_RANDPW}" ${_URL}/wlan/guest_access.lua -d 'sid='${_SESSION}
+
+cat js/qrcode.original.js > js/qrcode.js
+
+echo '$( document ).ready(function() {updateQRCode("qrcode", "WIFI:S:'${_SSID}';T:WPA;P:'${_RANDPW}';;");});' >> js/qrcode.js
 
